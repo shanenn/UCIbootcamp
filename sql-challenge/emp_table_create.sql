@@ -40,9 +40,9 @@ create table dept_manager (
 	foreign key (emp_no,dept_no) references dept_emp (emp_no,dept_no));
 
 -- Relative paths to import csv files
-copy departments (dept_no, dept_name) FROM 'C:\Users\shane\UCIbootcamp\sql-challenge\EmployeeSQL\data\departments.csv' DELIMITER ',' CSV HEADER;
-copy titles (title_id, title) FROM 'C:\Users\shane\UCIbootcamp\sql-challenge\EmployeeSQL\data\titles.csv' DELIMITER ',' CSV HEADER;
-copy employees (emp_no, emp_title, birth_date, first_name, last_name, sex, hire_date) FROM 'C:\Users\shane\UCIbootcamp\sql-challenge\EmployeeSQL\data\employees.csv' DELIMITER ',' CSV HEADER;
-copy salaries (emp_no, salary) FROM 'C:\Users\shane\UCIbootcamp\sql-challenge\EmployeeSQL\data\salaries.csv' DELIMITER ',' CSV HEADER;
-copy dept_emp (emp_no, dept_no) FROM 'C:\Users\shane\UCIbootcamp\sql-challenge\EmployeeSQL\data\dept_emp.csv' DELIMITER ',' CSV HEADER;
-copy dept_manager (dept_no,emp_no) FROM 'C:\Users\shane\UCIbootcamp\sql-challenge\EmployeeSQL\data\dept_manager.csv' DELIMITER ',' CSV HEADER;
+copy departments (dept_no, dept_name) FROM '.\EmployeeSQL\data\departments.csv' DELIMITER ',' CSV HEADER;
+copy titles (title_id, title) FROM '.\EmployeeSQL\data\titles.csv' DELIMITER ',' CSV HEADER;
+copy employees (emp_no, emp_title, birth_date, first_name, last_name, sex, hire_date) FROM '.\EmployeeSQL\data\employees.csv' DELIMITER ',' CSV HEADER;
+copy salaries (emp_no, salary) FROM '.\EmployeeSQL\data\salaries.csv' DELIMITER ',' CSV HEADER;
+copy dept_emp (emp_no, dept_no) FROM '.\EmployeeSQL\data\dept_emp.csv' DELIMITER ',' CSV HEADER;
+copy dept_manager (dept_no,emp_no) FROM '.\data\dept_manager.csv' DELIMITER ',' CSV HEADER;
