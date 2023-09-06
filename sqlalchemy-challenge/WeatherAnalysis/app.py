@@ -14,7 +14,7 @@ from flask import Flask, jsonify
 # Database Setup
 #################################################
 
-engine = create_engine("sqlite:///Resources/hawaii.sqlite")
+engine = create_engine("sqlite:///../Resources/hawaii.sqlite")
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables
@@ -116,8 +116,11 @@ def temps_start_end(start,end):
     try:
         dt.date.fromisoformat(start)
         dt.date.fromisoformat(end)
+        assert start < end
     except ValueError:
         return jsonify({"error": f"Date must be in YYYY-MM-DD format."})
+    except AssertionError:
+        return jsonify({"error": f"End date must be later than start date."})
     
     # Query based on date used
     temp_metrics = session.query(func.min(Measure.tobs),func.max(Measure.tobs),func.avg(Measure.tobs))\
@@ -125,6 +128,8 @@ def temps_start_end(start,end):
         .all()
     print('Successful start-end date query')
     session.close()
+
+    
     return jsonify([temp_metrics[0][0],temp_metrics[0][1],temp_metrics[0][2]])
 
 
