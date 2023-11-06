@@ -16,8 +16,8 @@ Upon analysis of the data from Sep. 2022 - Sep. 2023 several interesting observa
 3. Bike rides were most frequent in Manhattan and far less used outside of the Manhattan Area (story pg. 4/5 dynamic maps).
 
     - Ridership was observed to have two distinct patterns (story pg. 4 dynamic bar charts):
-        - Weekend rides which are frequent in the afternoon to evening.
-        - Weekday rides which occur most often around 9AM and 5PM.
+        -- Weekend rides which are frequent in the afternoon to evening.
+        -- Weekday rides which occur most often around 9AM and 5PM.
     - This observation implies riding is used as a work commuting option in the Manhattan area, but is not used to travel between boroughs.
     - The region of usage doesn't change between weekday and weekend which implies that a majority of riders reside in and work in the Manhattan area.
 
